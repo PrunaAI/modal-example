@@ -1,6 +1,6 @@
 # Modal AI Model Examples
 
-Run generative AI models on Modal's serverless GPU platform.
+Run generative AI models on [Modal's serverless platform](https://modal.com).
 
 ## Contents
 
@@ -35,9 +35,8 @@ platform. By following these examples, you can:
 
 ## Requirements
 
-- A paid [Modal](https://modal.com) account (For more information on getting started with Modal, check out
+- A free [Modal](https://modal.com) account (For more information on getting started with Modal, check out
   the [Modal Getting Started Guide](https://modal.com/docs/guide).)
-- Access to GPU-enabled Modal projects (note that the free tier does not include GPUs)
 - A personal [Hugging Face](https://huggingface.co) access token with permission to pull models (for examples using
   Hugging Face models)
 - Python 3.9+ and pip
@@ -52,7 +51,8 @@ To run the python script:
 - Run with modal: `modal run <script name>`. Note that modal will automatically kill the job if your connection
   is interrupted. If this is not what you want, you can set it to run in "detach" mode with -d:
   `modal run -d smash-flux-kontext-tutorial.py`
-- Beware this scripts are set to run on H100, make sure you are aware of their pricing. It may be a good idea to
+- Beware this scripts are set to run on H100, make sure you are aware of their pricing. Modal includes $30/month of
+  free compute in their Starter Plan, which covers ~7 hours of H100 time per month. Still, it may be a good idea to
   develop on smaller machines, keeping in mind that your original model needs to fit on the GPU to be optimized,
   and that the speedup will depend on the hardware (e.g. if you get 2x speedup on hardware A, you may get more, or less,
   on hardware B, so always do your benchmarks in the production conditions)
